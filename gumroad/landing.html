@@ -8,7 +8,7 @@
     <style>
       /* Brand palette */
       :root{
-        --bg:#0D0F11; --surface:#0F2A45; --muted:#6A8CA3; --accent:#2CCCD3; --text:#F2F4F5;
+        --bg:#19181C; --surface:#265F69; --muted:#9FBCC6; --accent:#297C8C; --accent-dark:#265F69; --text:#F5EDE7;
         --radius:12px; --max:840px;
       }
       /* Basic reset */
@@ -16,7 +16,7 @@
       html,body{height:100%}
       body{
         margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-        background:linear-gradient(180deg,#0D0F11 0%, #0F1113 100%);color:var(--text);
+        background:linear-gradient(180deg,#19181C 0%, #19181C 100%);color:var(--text);
         -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
         line-height:1.45;font-size:16px;
       }
@@ -29,7 +29,7 @@
       /* CTA layout */
       .hero-grid{display:grid;grid-template-columns:1fr;gap:18px;align-items:start}
       .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
-      .btn-primary{background:linear-gradient(135deg,var(--accent),#129fae);color:#061014;box-shadow:0 12px 30px rgba(44,204,211,0.12)}
+      .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#061014;box-shadow:0 12px 30px rgba(41,124,140,0.12)}
       .btn-secondary{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.06)}
 
       /* Sections */
@@ -53,7 +53,7 @@
 
       /* Light mode support */
       @media (prefers-color-scheme:light){
-        :root{--bg:#F2F4F5;--text:#0D0F11}
+        :root{--bg:#F5EDE7;--text:#19181C}
         body{background:var(--bg);color:var(--text)}
         section{background:linear-gradient(180deg, rgba(13,15,17,0.03), transparent);border:1px solid rgba(13,15,17,0.04)}
         .btn-primary{color:#fff}
@@ -76,7 +76,7 @@
             <p class="lead">Even if you have no portfolio, no experience closing deals, and no idea how to sell.</p>
 
             <p>
-              <button class="btn btn-primary" data-gumroad-action="buy" aria-label="Buy the 7-Day System now">Get the 7-Day System</button>
+              <a class="btn btn-primary" href="https://firstclientlab.gumroad.com/l/7-day-first-client-system" aria-label="Buy the 7-Day System now">Get the 7-Day System</a>
               <a href="#whats-inside" class="btn btn-secondary" role="button" aria-label="See what's inside">See what’s inside</a>
             </p>
           </div>
@@ -151,8 +151,8 @@
             <input type="hidden" data-gumroad-field="description" value="A practical system to land your first paying website client in 7 days.">
 
             <!-- Primary and secondary buy buttons -->
-            <button class="btn btn-primary" data-gumroad-action="buy" aria-label="Buy - Get the 7-Day System">Get the 7-Day System</button>
-            <button class="btn btn-secondary" data-gumroad-action="buy" aria-label="Buy - Start the 7-Day System">Start the 7-Day System</button>
+            <a class="btn btn-primary" href="https://firstclientlab.gumroad.com/l/7-day-first-client-system" aria-label="Buy - Get the 7-Day System">Get the 7-Day System</a>
+            <a class="btn btn-secondary" href="https://firstclientlab.gumroad.com/l/7-day-first-client-system" aria-label="Buy - Start the 7-Day System">Start the 7-Day System</a>
           </div>
         </div>
       </section>
