@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>The 7-Day First Client System — First Client Lab</title>
+    <meta name="description" content="A practical system to land your first paying website client in 7 days. For developers who can build websites but don't yet know how to get clients." />
+    <style>
+      /* Brand palette */
+      :root{
+        --bg:#0D0F11; --surface:#0F2A45; --muted:#6A8CA3; --accent:#2CCCD3; --text:#F2F4F5;
+        --radius:12px; --max:840px;
+      }
+      /* Basic reset */
+      *{box-sizing:border-box}
+      html,body{height:100%}
+      body{
+        margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+        background:linear-gradient(180deg,#0D0F11 0%, #0F1113 100%);color:var(--text);
+        -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+        line-height:1.45;font-size:16px;
+      }
+      .wrap{max-width:var(--max);margin:0 auto;padding:48px 20px}
+      header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+      .badge{font-weight:700;letter-spacing:0.14em;color:var(--muted);font-size:0.9rem}
+      h1{margin:18px 0 6px;font-size:clamp(1.6rem,3.6vw,2.6rem);line-height:1.02;color:var(--text)}
+      .lead{color:var(--muted);max-width:780px;margin-bottom:18px}
+
+      /* CTA layout */
+      .hero-grid{display:grid;grid-template-columns:1fr;gap:18px;align-items:start}
+      .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+      .btn-primary{background:linear-gradient(135deg,var(--accent),#129fae);color:#061014;box-shadow:0 12px 30px rgba(44,204,211,0.12)}
+      .btn-secondary{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,0.06)}
+
+      /* Sections */
+      section{margin-top:34px;padding:22px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border-radius:12px}
+      .muted{color:var(--muted)}
+      ul{margin:0;padding-left:1.1rem}
+      .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+
+      /* Timeline */
+      .timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px}
+      .day{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;border:1px solid rgba(106,140,163,0.06)}
+      .day strong{display:block;color:var(--text);margin-bottom:6px}
+
+      /* Footer CTA */
+      .final-cta{display:flex;flex-direction:column;gap:12px;align-items:start}
+
+      /* Accessibility helpers */
+      .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+
+      @media (min-width:760px){.hero-grid{grid-template-columns:1fr 380px}.final-cta{flex-direction:row;align-items:center}.grid-2{grid-template-columns:1fr 1fr}}
+
+      /* Light mode support */
+      @media (prefers-color-scheme:light){
+        :root{--bg:#F2F4F5;--text:#0D0F11}
+        body{background:var(--bg);color:var(--text)}
+        section{background:linear-gradient(180deg, rgba(13,15,17,0.03), transparent);border:1px solid rgba(13,15,17,0.04)}
+        .btn-primary{color:#fff}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap" role="main">
+      <header>
+        <div class="badge" aria-hidden="false">First Client Lab</div>
+        <nav aria-label="Product quick actions">
+          <a class="visually-hidden" href="#whats-inside">Skip to content</a>
+        </nav>
+      </header>
+
+      <section aria-labelledby="hero-heading" style="background:transparent;box-shadow:none;padding:0;margin-top:18px">
+        <div class="hero-grid">
+          <div>
+            <h1 id="hero-heading">Land Your First Paying Website Client in 7 Days</h1>
+            <p class="lead">Even if you have no portfolio, no experience closing deals, and no idea how to sell.</p>
+
+            <p>
+              <button class="btn btn-primary" data-gumroad-action="buy" aria-label="Buy the 7-Day System now">Get the 7-Day System</button>
+              <a href="#whats-inside" class="btn btn-secondary" role="button" aria-label="See what's inside">See what’s inside</a>
+            </p>
+          </div>
+
+          <aside aria-hidden="true" style="padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(106,140,163,0.06);">
+            <h3 style="margin:0 0 8px">The 7-Day First Client System</h3>
+            <p class="muted" style="margin:0">A practical system to land your first paying website client.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section id="problem" aria-labelledby="problem-heading">
+        <h2 id="problem-heading">The problem</h2>
+        <p class="muted">Being able to build a site is different from getting paid to build sites. Most builders stall on outreach, offer definition, and follow-up — not on technical skills.</p>
+      </section>
+
+      <section id="whats-inside" aria-labelledby="inside-heading">
+        <h2 id="inside-heading">What’s inside</h2>
+        <ul>
+          <li>The 7-Day First Client System PDF</li>
+          <li>Lead Tracker &amp; Outreach CRM spreadsheet</li>
+          <li>Offer selection guidance</li>
+          <li>Outreach scripts</li>
+          <li>Follow-up scripts</li>
+          <li>Simple close ask framework</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="plan-heading">
+        <h2 id="plan-heading">7-Day breakdown</h2>
+        <div class="timeline" role="list">
+          <div class="day" role="listitem"><strong>Day 1</strong>Pick one simple offer</div>
+          <div class="day" role="listitem"><strong>Day 2</strong>Build one demo or proof asset</div>
+          <div class="day" role="listitem"><strong>Day 3</strong>Find leads</div>
+          <div class="day" role="listitem"><strong>Day 4</strong>Send outreach</div>
+          <div class="day" role="listitem"><strong>Day 5</strong>Follow up</div>
+          <div class="day" role="listitem"><strong>Day 6</strong>Handle replies</div>
+          <div class="day" role="listitem"><strong>Day 7</strong>Ask for the close</div>
+        </div>
+      </section>
+
+      <section aria-labelledby="audience-heading">
+        <h2 id="audience-heading">Who this is for</h2>
+        <ul>
+          <li>You can build websites but have no clients yet</li>
+          <li>You want a practical path instead of random advice</li>
+          <li>You need scripts, structure, and a tracker</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="not-heading">
+        <h2 id="not-heading">What this is not</h2>
+        <ul>
+          <li>Not a huge agency course</li>
+          <li>Not a theory-heavy business book</li>
+          <li>Not a guarantee of income</li>
+          <li>Not a replacement for doing outreach</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="final-cta" style="margin-top:28px;padding:22px;">
+        <div class="final-cta">
+          <div>
+            <h2 id="final-cta">Ready to start?</h2>
+            <p class="muted">A direct, tactical system for builders who want clear steps and simple scripts.</p>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <!-- Server-side Gumroad fields -->
+            <input type="hidden" data-gumroad-field="name" value="The 7-Day First Client System">
+            <input type="hidden" data-gumroad-field="price" value="">
+            <input type="hidden" data-gumroad-field="description" value="A practical system to land your first paying website client in 7 days.">
+
+            <!-- Primary and secondary buy buttons -->
+            <button class="btn btn-primary" data-gumroad-action="buy" aria-label="Buy - Get the 7-Day System">Get the 7-Day System</button>
+            <button class="btn btn-secondary" data-gumroad-action="buy" aria-label="Buy - Start the 7-Day System">Start the 7-Day System</button>
+          </div>
+        </div>
+      </section>
+
+      <footer style="margin-top:28px;color:var(--muted);font-size:0.95rem">
+        <p style="margin:0">First Client Lab — Simple systems for builders getting their first paid clients.</p>
+      </footer>
+    </div>
+
+    <!-- Minimal inline script kept intentionally tiny; Gumroad sanitization may remove scripts. -->
+    <script>
+      /* Progressive enhancement: allow in-page anchor smooth scroll if JS is allowed */
+      (function(){
+        try{document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});
+        }catch(e){}
+      })();
+    </script>
+  </body>
+</html>
